@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <ul>
+        <% for(var i=0;i < itemlist.length; i++ ) {%>
+        <li><%= itemlist[i].desc %></li>
+        <% }%>
+    </ul>
+    
+    <form method="post" action="/add">
+        <label>Enter New Item: </label>
+        <input type="text" name="item_name">
+        <button type="submit" name="submit">Submit</button>
+    </form>
+  </body>
+</html>
